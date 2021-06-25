@@ -13,7 +13,7 @@ RegisterNUICallback('ThermiteResult', function(data, cb)
         failCb()
     end
     cb('ok')
-    TriggerEvent('progressbar:client:ToggleBusyness', false)
+    -- TriggerEvent('progressbar:client:ToggleBusyness', false) -- To check if another progressbar is running
 end)
 
 RegisterCommand('thermite', function(source, args)
@@ -44,5 +44,5 @@ exports('thermiteminigame', function(correctBlocks, incorrectBlocks, timetoShow,
         showtime = timetoShow,
         losetime = timetoLose + timetoShow,
     })
-    TriggerEvent('progressbar:client:ToggleBusyness', true)
+    -- TriggerEvent('progressbar:client:ToggleBusyness', true) -- To check if another progressbar is running
 end)
