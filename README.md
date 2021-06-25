@@ -22,3 +22,7 @@ Put the folder in your resources and start in resources.cfg
         print("failure")
     end)
 ```
+
+# Information
+Javascript code for the game is encrypted and obfuscated so the folder name cannot be changed.
+Script won't work if the folder name is changed.
