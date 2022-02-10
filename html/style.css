@@ -6,6 +6,7 @@
 .container {
     position: relative;
     top: 20vh;
+    display:none;
 }
   /* body{
     background-color: var(--bg-color);
