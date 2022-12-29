@@ -2,6 +2,7 @@
 Memory game like NoPixel for any framework
 Inspired by - https://codepen.io/torbenxxx/pen/MWJBzWP
 
+Join My Discord - https://discord.gg/VGYkkAYVv2
 # Usage
 
 Put the folder in your resources and start in resources.cfg
