@@ -4,7 +4,6 @@ local failCb
 local resultReceived = false
 
 RegisterNUICallback('ThermiteResult', function(data, cb)
-    -- exports['exo-inventory']:ToggleHotBar(true) Toggle so that inventory doesnt work.. this was something I made on my own server.. 
     SetNuiFocus(false, false)
     resultReceived = true
     if data.success then
@@ -13,11 +12,9 @@ RegisterNUICallback('ThermiteResult', function(data, cb)
         failCb()
     end
     cb('ok')
-    -- TriggerEvent('progressbar:client:ToggleBusyness', false) -- To check if another progressbar is running
 end)
 
 RegisterCommand('thermite', function(source, args)
-    -- Please check the parameters below for exports
     exports["memorygame"]:thermiteminigame(10, 3, 3, 10,
     function() -- success
         print("success")
@@ -35,7 +32,6 @@ exports('thermiteminigame', function(correctBlocks, incorrectBlocks, timetoShow,
     resultReceived = false
     successCb = success
     failCb = fail
-    -- exports['exo-inventory']:ToggleHotBar(false) Toggle so that inventory doesnt work.. this was something I made on my own server.. 
     SetNuiFocus(true, true)
     SendNUIMessage({
         action = "Start",
@@ -44,5 +40,4 @@ exports('thermiteminigame', function(correctBlocks, incorrectBlocks, timetoShow,
         showtime = timetoShow,
         losetime = timetoLose + timetoShow,
     })
-    -- TriggerEvent('progressbar:client:ToggleBusyness', true) -- To check if another progressbar is running
 end)
